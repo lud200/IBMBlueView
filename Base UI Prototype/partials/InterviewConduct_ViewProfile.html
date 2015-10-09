@@ -1,0 +1,111 @@
+<header class="header">
+    <div class="container-fluid">
+    	
+        <a href="javascript:;" class="pull-right link-calculate-score" data-ng-click="calculate(candidate)">Calculate Score</a>
+        <!--End Calculate Score Link -->
+    	
+        <h1>{{pageTitle}}</h1>
+        <!--End .title-->
+        
+        <a href="#/interviewSchedule" class="icon back"></a>
+        <!--End .search icon-->
+
+    </div>
+</header>
+<!--End .header-->
+
+
+<div class="page-content candidate-info">
+
+    <div class="left-side">
+        <div class="interviewer">
+            <div class="radial-progress">
+                <div class="circle">
+                    <div class="mask full" data-ng-style="getTransform(candidate.interviews,1.8)">
+                        <div class="fill" data-ng-style="getTransform(candidate.interviews,1.8)"></div>
+                    </div>
+                    <div class="mask half">
+                        <div class="fill" data-ng-style="getTransform(candidate.interviews,1.8)"></div>
+                        <div class="fill fix" data-ng-style="getTransform(candidate.interviews,3.6)"></div>
+                    </div>
+                </div>
+                <div class="inset">
+                    <img src="i/user-unknown.jpg" data-ng-src="{{candidate.img}}" alt="thumb">
+                </div>
+            </div>
+            <span class="name">Firstname Lastname</span>
+            <span class="schedule-interviewers">{{getCompletedInterviews(candidate.interviews)}} Interviews Completed</span>
+        </div>
+        <div class="interviewer-info">
+            <span class="location">{{candidate.location}}, {{candidate.region}}</span>
+			<span class="qualification">
+				<span data-ng-repeat="qualification in candidate.competency | limitTo : 4 track by $index">
+					{{($index===3 && candidate.competency.length>4)? candidate.competency.length-3+' more...':qualification}}
+				</span>
+			</span>
+        </div>
+        <a href="javascript:" class="btn" data-ng-click="hideFullProfile();">Evaluate</a>
+        <!--End add-->
+    </div>
+    <!--End left-side-->
+
+
+    <div class="center-content">
+        <ul class="tabs clearfix">
+            <li><a href="javascript:" class="active">Experience</a></li>
+            <li><a href="javascript:">Education</a></li>
+            <li><a href="javascript:">Background</a></li>
+            <li><a href="javascript:">Other Skill</a></li>
+        </ul>
+        <div class="tab-hold">
+            <div class="experience" data-ng-repeat="experience in candidate.experiences">
+                <i></i>
+                <div class="time">{{experience.time}}</div>
+                <div class="position">{{experience.position}}</div>
+                <div class="loc"><span class="company">{{experience.company}}</span><span class="location">{{experience.location}}</span> </div>
+                <div class="desc">{{experience.desc}}</div>
+            </div>
+        </div>
+    </div>
+    <!--End left-side-->
+
+
+    <div class="right-side">
+        <h2 class="title">Comments</h2>
+        <div class="comments">
+            <div class="user clearfix">
+                <img src="i/user-unknown.jpg" data-ng-src="{{candidate.comments.img}}" alt="thumb">
+                <div class="desc">
+                    <div class="type">{{candidate.comments.type}}</div>
+                    <div class="name">{{candidate.comments.name}}</div>
+                </div>
+            </div>
+            <div class="texearea">
+            	<textarea placeholder="Enter your comment..." data-ng-model="candidate.comments.comments"></textarea>
+            </div>
+        </div>
+        <!--End .comments-->
+        <div class="suggest">
+        	<a href="javascript:;" class="pull-right icon icon-add-role"></a>
+            <h2 class="suggest-title">Role Suggested</h2>
+            <div class="form-inline">
+                <div class="input-group" data-ng-repeat="suggest in candidate.suggest">
+                    <label>{{$index + 1}}.</label>
+                    <div class="input-wrapper">
+                    	<input type="text" class="form-control" data-ng-model="suggest.value" />
+                    </div>
+                    <a href="javascript:;" class="icon icon-remove" data-ng-show="suggest.value" data-ng-click="suggest.value = '';"></a>
+                </div>
+                <!--End .form-group -->
+            </div>
+        </div>
+        <!--End .suggest-->
+    </div>
+    <!--End right-side-->
+
+</div>
+<!--End .page-content-->
+
+
+<footer class="footer" data-ng-include="'templates/InterviewerFooter.html'"></footer>
+<!--End .popup-->

@@ -1,0 +1,28 @@
+<div class="login-box {{error?'error':''}}">
+    <div class="logo-holder">
+        <img class="logo" src="i/logo.png" alt="logo">
+        <!--End .logo-->
+    </div>
+    <!--End logo-holder-->
+    <form>
+        <input type="text" data-ng-model="loginForm.intranetId" placeholder="Intranet ID"/>
+        <!--End input-->
+        <input type="password" data-ng-model="loginForm.pw" placeholder="Password"/>
+        <!--End input-->
+        <span class="error-msg">Incorrect Intranet ID or Password</span>
+        <!--End error-msg-->
+        <div class="button-holder">
+            <a href="javascript:" data-ng-click="login(loginForm)" class="btn">Sign In</a>
+            <!--End button-->
+        </div>
+        <!--End .button-holder-->
+        <a href="javascript:" data-ng-init="remember = false" data-ng-click="remember= !remember" class="remember {{remember?'checked':''}}">Remember me</a>
+        <!--End .remember-->
+    </form>
+    <!--End form-->
+</div>
+<!--End login-box-->
+
+<footer class="login-footer">
+    &copy; Copyright IBM Corporation, 2015. All Rights Reserved
+</footer>

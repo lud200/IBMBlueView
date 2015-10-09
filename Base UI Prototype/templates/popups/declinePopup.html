@@ -1,0 +1,37 @@
+<div class="reason-popup decline-popup" data-ng-click="$event.stopPropagation()">
+    <div class="status">
+        <h2>Interview Declined</h2>
+
+        <div class="user">
+            <div class="radial-progress">
+                <div class="circle">
+                    <div class="mask full" data-ng-style="getTransform(selectedNotification.candidate.progress,1.8)">
+                        <div class="fill" data-ng-style="getTransform(selectedNotification.candidate.progress,1.8)"></div>
+                    </div>
+                    <div class="mask half">
+                        <div class="fill" data-ng-style="getTransform(selectedNotification.candidate.progress,1.8)"></div>
+                        <div class="fill fix" data-ng-style="getTransform(selectedNotification.candidate.progress,3.6)"></div>
+                    </div>
+                </div>
+                <div class="inset">
+                    <img src="i/user-unknown.jpg" data-ng-src="{{selectedNotification.candidate.img}}" alt="thumb">
+                </div>
+            </div>
+            <span class="type">Candidate</span>
+            <span class="name">{{selectedNotification.candidate.name}}</span>
+        </div>
+        <!--End user-->
+    </div>
+    <!--End status-->
+    <div class="desc">
+    	<textarea data-ng-model="selectedNotification.candidate.desc" placeholder="Please enter reason for declining..." data-ng-class="{'error': selectedNotification.candidate.descError}"></textarea>
+    </div>
+    <!--End .desc-->
+    
+    <div class="buttons-group">
+    	<a href="javascript:;" class="btn white btn-cancel" data-ng-click="hidePopup()">Cancel</a>
+		<a href="javascript:;" class="btn blue btn-submit" data-ng-click="submitPopup()">Submit</a>
+    </div>
+    <!--End .buttons-group -->
+
+</div>

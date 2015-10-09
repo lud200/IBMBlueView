@@ -1,0 +1,137 @@
+[
+  {
+    "status":"completed",
+    "time": 5,
+    "timeLabel": "5 mins ago",
+    "candidate":{
+    	"name":"1Firstname Lastname",
+    	"img":"i/user-7.jpg",
+    	"progress": 50
+    },
+    "interviewer":{
+      "name":"Firstname Lastname",
+      "img":"i/user-2.jpg"
+    },
+    "rejectReason":""
+  },
+  {
+    "status":"decline",
+    "time": 10,
+    "timeLabel": "10 mins ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "img":"i/user-9.jpg",
+      "progress": 65
+    },
+    "interviewer":{
+      "name":"Firstname Lastname",
+      "img":"i/user-5.jpg"
+    },
+    "rejectReason":"Decline reason goes here lorem ipsum dolor sit amet consecteture amet elite adispising set lorem ipsum dolor sit amet consecteture amet elite adispi sing set lorem ipsum dolor sit amet consecteture amet elite adispis ing set"
+  },
+  {
+    "status":"accept",
+    "time": 30,
+    "timeLabel": "30 mins ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "img":"i/user-10.jpg",
+      "progress": 75
+    },
+    "interviewer":{
+      "name":"1Firstname Lastname",
+      "img":"i/user-6.jpg"
+    },
+    "rejectReason":"Decline reason goes here lorem ipsum dolor sit amet consecteture amet elite adispising set lorem ipsum dolor sit amet consecteture amet elite adispi sing set lorem ipsum dolor sit amet consecteture amet elite adispis ing set"
+  },
+  {
+    "status":"decline",
+    "time": 50,
+    "timeLabel": "50 mins ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "img":"i/user-unknown.jpg",
+      "progress": 50
+    },
+    "interviewer":{
+      "name":"Firstname Lastname",
+      "img":"i/user-5.jpg"
+    },
+    "rejectReason":"Decline reason goes here lorem ipsum dolor sit amet consecteture amet elite adispising set lorem ipsum dolor sit amet consecteture amet elite adispi sing set lorem ipsum dolor sit amet consecteture amet elite adispis ing set"
+  },
+  {
+    "status":"decline",
+    "time": 60,
+    "timeLabel": "1 hour ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "img":"i/user-unknown.jpg",
+      "progress": 50
+    },
+    "interviewer":{
+      "name":"Firstname Lastname",
+      "img":"i/user-5.jpg"
+    },
+    "rejectReason":"Decline reason goes here lorem ipsum dolor sit amet consecteture amet elite adispising set lorem ipsum dolor sit amet consecteture amet elite adispi sing set lorem ipsum dolor sit amet consecteture amet elite adispis ing set"
+  },
+  {
+    "status":"accept",
+    "time": 120,
+    "timeLabel": "2 hours ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "img":"i/user-10.jpg",
+      "progress": 75
+    },
+    "interviewer":{
+      "name":"Firstname Lastname",
+      "img":"i/user-6.jpg"
+    },
+    "rejectReason":"Decline reason goes here lorem ipsum dolor sit amet consecteture amet elite adispising set lorem ipsum dolor sit amet consecteture amet elite adispi sing set lorem ipsum dolor sit amet consecteture amet elite adispis ing set"
+  },
+  {
+    "status":"completed",
+    "time": 300,
+    "timeLabel": "5 hours ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "img":"i/user-7.jpg",
+      "progress": 50
+    },
+    "interviewer":{
+      "name":"Firstname Lastname",
+      "img":"i/user-2.jpg"
+    },
+    "rejectReason":""
+  },
+  {
+    "status":"decline",
+    "time": 600,
+    "timeLabel": "10 hours ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "img":"i/user-9.jpg",
+      "progress": 50
+    },
+    "interviewer":{
+      "name":"Firstname Lastname",
+      "img":"i/user-5.jpg"
+    },
+    "rejectReason":"Decline reason goes here lorem ipsum dolor sit amet consecteture amet elite adispising set lorem ipsum dolor sit amet consecteture amet elite adispi sing set lorem ipsum dolor sit amet consecteture amet elite adispis ing set"
+  },
+  {
+    "status":"accept",
+    "time": 900,
+    "timeLabel": "15 hours ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "img":"i/user-10.jpg",
+      "progress": 75
+    },
+    "interviewer":{
+      "name":"Firstname Lastname",
+      "img":"i/user-6.jpg"
+    },
+    "rejectReason":"Decline reason goes here lorem ipsum dolor sit amet consecteture amet elite adispising set lorem ipsum dolor sit amet consecteture amet elite adispi sing set lorem ipsum dolor sit amet consecteture amet elite adispis ing set"
+  }
+]

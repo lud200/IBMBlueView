@@ -1,0 +1,107 @@
+<header class="header">
+    <div class="container-fluid">
+        <h1>{{pageTitle}}</h1>
+        <!--End .title-->
+
+        <a href="#/candidateInfo" class="icon back"></a>
+        <!--End .search icon-->
+
+    </div>
+</header>
+<!--End .header-->
+
+
+<div class="page-content candidate-info">
+
+    <div class="left-side">
+        <div class="interviewer no-border">
+            <div class="radial-progress">
+                <div class="circle">
+                    <div class="mask full" data-ng-style="getTransform(candidate.interviews,1.8)">
+                        <div class="fill" data-ng-style="getTransform(candidate.interviews,1.8)"></div>
+                    </div>
+                    <div class="mask half">
+                        <div class="fill" data-ng-style="getTransform(candidate.interviews,1.8)"></div>
+                        <div class="fill fix" data-ng-style="getTransform(candidate.interviews,3.6)"></div>
+                    </div>
+                </div>
+                <div class="inset">
+                    <img src="i/user-unknown.jpg" data-ng-src="{{candidate.img}}" alt="thumb">
+                </div>
+            </div>
+            <span class="name">Firstname Lastname</span>
+            <span class="schedule-interviewers">{{getCompletedInterviews(candidate.interviews)}} Interviews Completed</span>
+        </div>
+        <div class="score">
+            <span class="score-label">Total Score</span>
+            <span class="marks">{{candidate.score}}</span>
+        </div>
+        <div class="interviewer-info">
+            <span class="location">{{candidate.location}}{{candidate.region}}</span>
+			<span class="qualification">
+				<span data-ng-repeat="qualification in candidate.competency | limitTo : 4 track by $index">
+					 {{($index===3 && candidate.competency.length>4)? candidate.competency.length-3+' more...':qualification}}
+				</span>
+			</span>
+        </div>
+        <a href="javascript:" class="btn">View Full Profile</a>
+        <!--End add-->
+    </div>
+    <!--End left-side-->
+
+    <div class="center-content">
+        <h1 class="center-title">Evaluation</h1>
+        <ul class="tabs clearfix ">
+            <li class="long-text"><a href="javascript:" class="active">Mobile Developer</a></li>
+            <li class="long-text"><a href="javascript:">Java Programmer</a></li>
+            <li class="long-text"><a href="javascript:">Other lorem ipsum</a></li>
+        </ul>
+        <div class="tab-hold no-padding">
+            <div data-accordion data-close-others="false">
+                <div data-accordion-group data-is-open="evaluation.open" data-ng-repeat="evaluation in candidate.evaluation">
+                    <div data-accordion-heading>
+                        {{evaluation.title}} <i class="arrow" data-ng-class="{'up': evaluation.open}"></i>
+                    </div>
+                    <div class="sub" data-ng-repeat="sub in evaluation.category">
+                        <p>{{sub.desc}}</p>
+                        <div class="ratings">
+                            <div data-rating data-ng-model="sub.score" data-max="5" ></div>
+                            <span class="rate-text" data-ng-class="{'not-rated': !sub.score}">{{sub.score===5?'Excellent':sub.score===4?'Good':sub.score===3?'Average':(sub.score !== 0)?'Bad':'Not Rated'}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End left-side-->
+
+
+    <div class="right-side">
+        <h2 class="title">Comments</h2>
+        <div class="comments">
+            <div class="user clearfix">
+                <img src="i/user-unknown.jpg" data-ng-src="{{candidate.comments.img}}" alt="thumb">
+                <div class="desc">
+                    <div class="type">{{candidate.comments.type}}</div>
+                    <div class="name">{{candidate.comments.name}}</div>
+                </div>
+            </div>
+            <p data-ng-repeat="comment in candidate.comments.comments">{{comment}}</p>
+        </div>
+        <!--End .comments-->
+        <div class="suggest">
+            <h2 class="suggest-title">Role Suggested</h2>
+            <ul>
+                <li data-ng-repeat="suggest in candidate.suggest">{{suggest}}</li>
+            </ul>
+        </div>
+        <!--End .suggest-->
+    </div>
+    <!--End right-side-->
+
+</div>
+<!--End .page-content-->
+
+
+<footer class="footer"  data-ng-include="'templates/Footer.html'"></footer>
+<!--End footer-->

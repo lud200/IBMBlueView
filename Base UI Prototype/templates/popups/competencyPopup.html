@@ -1,0 +1,29 @@
+<div class="competency-popup" data-ng-style="getCompetencyStyle()" data-ng-click="$event.stopPropagation()">
+	<div class="title">Select Competency<a href="javascript:" class="sort"></a> </div>
+        <!--End .title-->
+        <input type="text" class="filter-input" data-ng-model="competencyFilter" placeholder="Type here to filter list">
+        <!--End .filter-input-->
+
+    <div class="inner">
+        <ul>
+            <li data-ng-init="competence.open=true" data-ng-repeat="competence in competency | filter:competencyFilter" class="{{competence.open?'open':''}}">
+                <a href="javascript:" data-ng-click="toggleCompetency(competence)" class="{{competence.select?'select':''}}">{{competence.name}}</a>
+                <a data-ng-if="competence.sub" data-ng-click="competence.open=!competence.open" href="javascript:" class="toggle {{competence.open?'up':''}}"></a>
+                <ul data-ng-if="competence.sub">
+                    <li data-ng-repeat="subCompetence in competence.sub">
+                        <a href="javascript:" data-ng-click="toggleSubCompetency(competence,subCompetence)" class="{{subCompetence.select?'select':''}}">{{subCompetence.name}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!--End list-->
+
+    </div>
+    <div class="button-holder">
+        <a href="javascript:" data-ng-click="setCompetency()" class="btn">Select</a>
+    </div>
+    <!--End button-holder-->
+    <span class="arrow-left" data-ng-style="getCompetencyArrowStyle()"></span>
+    <!--End arrow-bottom-->
+
+</div>

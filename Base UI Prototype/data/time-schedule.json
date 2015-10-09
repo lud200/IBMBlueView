@@ -1,0 +1,53 @@
+[
+  {
+    "time":"8:00 AM",
+    "msg":"Interviewer is not available.",
+    "available": false
+  },
+  {
+    "time":"9:00 AM",
+    "msg":"",
+    "available": true
+  },
+  {
+    "time":"10:00 AM",
+    "msg":"",
+    "available": true
+  },
+  {
+    "time":"11:00 AM",
+    "msg":"Interviewer has interview scheduled.",
+    "name":"Firstname Lastname",
+    "candidate":"Candidate",
+    "img":"i/user-unknown.jpg",
+    "available": false
+  },
+  {
+    "time":"12:00 PM",
+    "msg":"",
+    "available": true
+  },
+  {
+    "time":"1:00 PM",
+    "msg":"Interviewer has interview scheduled.",
+    "name":"Firstname Lastname",
+    "candidate":"Interviewer",
+    "img":"i/user-5.jpg",
+    "available": false
+  },
+  {
+    "time":"2:00 PM",
+    "msg":"",
+    "available": true
+  },
+  {
+    "time":"3:00 PM",
+    "msg":"Interviewer has pending interview request.",
+    "available": false
+  },
+  {
+    "time":"4:00 PM",
+    "msg":"",
+    "available": true
+  }
+]

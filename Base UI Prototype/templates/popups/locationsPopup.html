@@ -1,0 +1,12 @@
+<div class="region-popup" data-ng-style="popupStyle" data-ng-click="$event.stopPropagation()">
+    <div class="title">Select Location</div>
+    <ul>
+        <li data-ng-repeat="location in locations track by $index">
+            <a href="javascript:" data-ng-click="setVal(candidate,location,'location')">{{location}}</a>
+        </li>
+    </ul>
+    <!--End list-->
+    <span class="arrow-down"></span>
+    <!--End arrow-->
+</div>
+<!--region popup-->

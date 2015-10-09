@@ -1,0 +1,61 @@
+{
+  "candidates": [
+    {
+      "img": "i/user-7.jpg",
+      "name": "John Bravo",
+      "loggedIn": true
+    },
+    {
+      "img": "i/user-8.jpg",
+      "name": "John Sullivan",
+      "loggedIn": true
+    },
+    {
+      "img": "i/user-4.jpg",
+      "name": "Firstname Lastname",
+      "loggedIn": false
+    },
+    {
+      "img": "i/user-5.jpg",
+      "name": "Firstname Lastname",
+      "loggedIn": false
+    },
+    {
+      "img": "i/user-6.jpg",
+      "name": "Firstname Lastname",
+      "loggedIn": false
+    }
+  ],
+  "interviewers": [
+    {
+      "img": "i/user-5.jpg",
+      "name": "Christina Johnson",
+      "loggedIn": false
+    },
+    {
+      "img": "i/user-3.jpg",
+      "name": "John Blackmore",
+      "loggedIn": false
+    },
+    {
+      "img": "i/user-6.jpg",
+      "name": "John Doe",
+      "loggedIn": true
+    },
+    {
+      "img": "i/user-4.jpg",
+      "name": "Firstname Lastname",
+      "loggedIn": false
+    },
+    {
+      "img": "i/user-5.jpg",
+      "name": "Firstname Lastname",
+      "loggedIn": false
+    },
+    {
+      "img": "i/user-6.jpg",
+      "name": "Firstname Lastname",
+      "loggedIn": false
+    }
+  ]
+}

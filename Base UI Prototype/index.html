@@ -1,0 +1,49 @@
+<!doctype html>
+<html data-ng-app="App">
+<head>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" >
+
+    <!-- CSS Style -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/screen.css" rel="stylesheet" type="text/css">
+
+    <title>IBM-SiBM</title>
+
+</head>
+
+<body data-ng-controller="mainCtrl" class="{{page}} {{popup!==''?'show-popup':''}} {{sidebarType}}">
+
+    <main class="view-frame" data-ui-view ></main>
+    <!-- End .view-frame -->
+
+
+    <aside class="side-bar" data-ng-click="hideSidebar()" data-ng-if="sidebar !== ''" data-ng-include="'templates/'+sidebar+'Sidebar.html'"></aside>
+    <!--End left menu-->
+
+    <div class="popup" data-ng-click="hidePopup()" data-ng-if="popup !== ''" data-ng-include="'templates/popups/'+popup+'Popup.html'"></div>
+    <!--End .popup-->
+
+    <!--External javascript:-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src='bower_components/angular-file-model/angular-file-model.js'></script>
+    <script src="bower_components/angular-cookie/angular-cookies.js"></script>
+
+    <script src="js/scripts.js"></script>
+
+    <script src="js/services.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/directive.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

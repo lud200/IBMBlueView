@@ -1,0 +1,106 @@
+$circle-size: 59px
+$circle-background: rgba(229,229,229,.8)
+$circle-color: #539a00
+$inset-size: 51px
+$inset-color: #fff
+$transition-length: 1s
+$shadow: none
+
+/*radial-progress*/
+.radial-progress
+  width:  $circle-size
+  height: $circle-size
+
+  background-color: $circle-background
+  border-radius: 50%
+  box-shadow: $shadow
+  .circle
+    position: relative
+    z-index: 1
+    .mask, .fill
+      width:    $circle-size
+      height:   $circle-size
+      position: absolute
+      border-radius: 50%
+
+
+    .mask, .fill
+      -webkit-backface-visibility: hidden
+      transition: -webkit-transform $transition-length linear 1s
+      transition: -ms-transform $transition-length linear 1s
+      transition: transform $transition-length linear 1s
+      border-radius: 50%
+
+    .mask
+      z-index: 2
+      clip: rect(0px, $circle-size, $circle-size, $circle-size/2)
+      .fill
+        clip: rect(0px, $circle-size/2, $circle-size, 0px)
+        background-color: $circle-color
+
+    .mask.half
+      z-index: 3
+
+
+  .inset
+    width:       $inset-size
+    height:      $inset-size
+    position:    absolute
+    z-index: 5
+    margin-left: ($circle-size - $inset-size)/2
+    margin-top:  ($circle-size - $inset-size)/2
+
+    background-color: $inset-color
+    border-radius: 50%
+    box-shadow: $shadow
+
+$circle-size-big: 70px
+$inset-size-big: 60px
+/*radial-progress interviewers-holder*/
+.interviewers-holder
+  .radial-progress
+    width:  $circle-size-big
+    height: $circle-size-big
+
+    .circle
+      .mask, .fill
+        width:    $circle-size-big
+        height:   $circle-size-big
+
+      .mask
+        clip: rect(0px, $circle-size-big, $circle-size-big, $circle-size-big/2)
+        .fill
+          clip: rect(0px, $circle-size-big/2, $circle-size-big, 0px)
+
+    .inset
+      width:       $inset-size-big
+      height:      $inset-size-big
+      margin-left: ($circle-size-big - $inset-size-big)/2
+      margin-top:  ($circle-size-big - $inset-size-big)/2
+
+$circle-size-candidate-info: 80px
+$inset-size-candidate-info: 70px
+$circle-background-candidate-info: rgba(229,229,229,.1)
+/*radial-progress candidate-info*/
+.candidate-info
+  .radial-progress
+    width:  $circle-size-candidate-info
+    height: $circle-size-candidate-info
+    background-color: $circle-background-candidate-info
+
+    .circle
+      .mask, .fill
+        width:    $circle-size-candidate-info
+        height:   $circle-size-candidate-info
+
+      .mask
+        clip: rect(0px, $circle-size-candidate-info, $circle-size-candidate-info, $circle-size-candidate-info/2)
+        .fill
+          clip: rect(0px, $circle-size-candidate-info/2, $circle-size-candidate-info, 0px)
+
+    .inset
+      width:       $inset-size-candidate-info
+      height:      $inset-size-candidate-info
+      margin-left: ($circle-size-candidate-info - $inset-size-candidate-info)/2
+      margin-top:  ($circle-size-candidate-info - $inset-size-candidate-info)/2
+

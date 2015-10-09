@@ -1,0 +1,74 @@
+[
+  {
+    "name":"Firstname Lastname",
+    "img":"i/user-2.jpg",
+    "interviews": 5,
+    "location":"Somers","region":"Newyork",
+    "competency":["Mobile developer","Java programmer","Quality engineer","Release engineer"],
+    "select":false
+  },
+  {
+    "name":"Firstname Lastname",
+    "img":"i/user-6.jpg",
+    "interviews": 3,
+    "location":"Somers","region":"Newyork",
+    "competency":["Mobile developer","Java programmer","Quality engineer","Release engineer"],
+    "select":false
+  },
+  {
+    "name":"Firstname Lastname",
+    "img":"i/user-5.jpg",
+    "interviews": 5,
+    "location":"Somers","region":"Newyork",
+    "competency":["Mobile developer","Java programmer","Quality engineer","Release engineer","Release engineer"],
+    "select":false
+  },
+  {
+    "name":"Firstname Lastname",
+    "img":"i/user-2.jpg",
+    "interviews": 5,
+    "location":"Somers","region":"Newyork",
+    "competency":["Mobile developer","Java programmer","Quality engineer","Release engineer"],
+    "select":false
+  },
+  {
+    "name":"Firstname Lastname",
+    "img":"i/user-6.jpg",
+    "interviews": 3,
+    "location":"Somers","region":"Newyork",
+    "competency":["Mobile developer","Java programmer","Quality engineer","Release engineer"],
+    "select":false
+  },
+  {
+    "name":"Firstname Lastname",
+    "img":"i/user-5.jpg",
+    "interviews": 5,
+    "location":"Somers","region":"Newyork",
+    "competency":["Mobile developer","Java programmer","Quality engineer","Release engineer","Release engineer"],
+    "select":false
+  },
+  {
+    "name":"Firstname Lastname",
+    "img":"i/user-2.jpg",
+    "interviews": 5,
+    "location":"Somers","region":"Newyork",
+    "competency":["Mobile developer","Java programmer","Quality engineer","Release engineer"],
+    "select":false
+  },
+  {
+    "name":"Firstname Lastname",
+    "img":"i/user-6.jpg",
+    "interviews": 3,
+    "location":"Somers","region":"Newyork",
+    "competency":["Mobile developer","Java programmer","Quality engineer","Release engineer"],
+    "select":false
+  },
+  {
+    "name":"Firstname Lastname",
+    "img":"i/user-5.jpg",
+    "interviews": 5,
+    "location":"Somers","region":"Newyork",
+    "competency":["Mobile developer","Java programmer","Quality engineer","Release engineer","Release engineer"],
+    "select":false
+  }
+]

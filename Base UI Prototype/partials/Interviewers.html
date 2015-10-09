@@ -1,0 +1,68 @@
+<header class="header">
+    <div class="container-fluid">
+        <h1 data-ng-if="!search">{{pageTitle}}</h1>
+        <!--End .title-->
+        <a data-ng-if="!search" href="javascript:" class="user" data-ng-click="$parent.showUsers()">
+            <img src="i/user-1.jpg" alt="user-thumb" data-ng-src="{{$parent.selectedUser.img}}">
+            {{$parent.selectedUser.name}}
+        </a>
+        <!--End .user details-->
+        <a data-ng-if="!search" href="javascript:" class="icon search right-margin" data-ng-click="showSearch()"></a>
+        <!--End .search icon-->
+        <a data-ng-if="!search" href="javascript:" data-ng-click="showFilterSidebar()" class="icon filter"></a>
+        <!--End .filter icon-->
+        <a data-ng-if="!search" href="javascript:" data-ng-click="showSortSidebar()" class="icon sort"></a>
+        <!--End .sort icon-->
+        <a data-ng-if="!search" href="javascript:" class="icon add"></a>
+        <!--End .add icon-->
+
+        <a data-ng-if="search" href="javascript:" data-ng-click="cancelSearch()" class="link left-align">Cancel</a>
+        <!--End cancel-->
+        <div data-ng-if="search" class="search-input">
+            <input data-ng-model="searchText.text" data-ng-change="doSearch(searchText.text)" type="text" data-auto-focus/>
+            <a href="javascript:" data-ng-if="searchText.text.length>0" data-ng-click="clearSearchText()" class="clear"></a>
+        </div>
+        <!--End .search-input-->
+    </div>
+</header>
+<!--End .header-->
+
+
+<div class="page-content">
+    <!--End .interviewer-->
+    <div class="interviewers-holder">
+        <div data-ng-init="interviewer.actions = false;" class="col-md-4 col-sm-6 {{interviewer.status}} {{interviewer.actions?'show-action':''}}"
+             data-ng-repeat="interviewer in interviewers | orderBy : $parent.sortByOpt : $parent.sortOption" data-same-height>
+            <div class="inner">
+                <a href="javascript:" data-ng-click="toggleAction(interviewer)" class="action-btn"></a>
+
+                <div class="user">
+                    <img src="i/user-unknown.jpg" data-ng-src="{{interviewer.img}}" alt="thumb">
+                    <span class="name">{{interviewer.name}}</span>
+                    <span class="interviews">{{interviewer.interviews}} Interviews Scheduled</span>
+                    <span class="location">{{interviewer.location}}{{interviewer.region}}</span>
+                    <span class="qualification">
+                        <span data-ng-repeat="qualification in interviewer.competency | limitTo : 4 track by $index">
+                            {{($index===3 && interviewer.competency.length>4)? interviewer.competency.length-3+' more...':qualification}}
+                        </span>
+                    </span>
+                </div>
+                <!--End user-->
+            </div>
+            <!--End inner-->
+            <div class="actions show-all">
+                <a href="#/interviewerInfo" class="details"><i></i>Details</a>
+                <a href="javascript:" class="edit"><i></i>Edit</a>
+                <a href="javascript:" data-ng-click="deleteNotification(notification)" class="delete"><i></i>Delete</a>
+            </div>
+            <!--End actions-->
+        </div>
+    </div>
+    <!--End interviewer-holder-->
+
+</div>
+<!--End .page-content-->
+
+
+<footer class="footer"  data-ng-include="'templates/Footer.html'"></footer>
+<!--End footer-->

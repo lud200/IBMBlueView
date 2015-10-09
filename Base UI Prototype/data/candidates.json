@@ -1,0 +1,289 @@
+[
+  {
+    "name": "Firstname Lastname",
+    "img": "i/user-9.jpg",
+    "interviews": [
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "complete"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      }
+    ],
+    "progress": 50,
+    "location": "Somers",
+    "region": "Newyork",
+    "competency": [
+      "Mobile developer",
+      "Java programmer",
+      "Quality engineer",
+      "Release engineer"
+    ],
+    "select": false
+  },
+  {
+    "name": "Firstname Lastname",
+    "img": "i/user-9.jpg",
+    "interviews": [
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "decline"
+      }
+    ],
+    "progress": 40,
+    "location": "Somers",
+    "region": "Newyork",
+    "competency": [
+      "Mobile developer",
+      "Java programmer",
+      "Quality engineer",
+      "Release engineer"
+    ],
+    "select": false
+  },
+  {
+    "name": "Firstname Lastname",
+    "img": "i/user-9.jpg",
+    "interviews": [
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      },
+      {
+        "name":"Interview 1",
+        "status": "decline"
+      }
+    ],
+    "progress": 50,
+    "location": "Somers",
+    "region": "Newyork",
+    "competency": [
+      "Mobile developer",
+      "Java programmer",
+      "Quality engineer",
+      "Release engineer",
+      "Release engineer"
+    ],
+    "select": false
+  },
+  {
+    "name": "Firstname Lastname",
+    "img": "i/user-9.jpg",
+    "interviews": [
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "complete"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      }
+    ],
+    "progress": 60,
+    "location": "Somers",
+    "region": "Newyork",
+    "competency": [
+      "Mobile developer",
+      "Java programmer",
+      "Quality engineer",
+      "Release engineer"
+    ],
+    "select": false
+  },
+  {
+    "name": "Firstname Lastname",
+    "img": "i/user-unknown.jpg",
+    "interviews": [
+      {
+        "name":"Interview 1",
+        "status": "complete"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      }
+    ],
+    "progress": 80,
+    "location": "Somers",
+    "region": "Newyork",
+    "competency": [
+      "Mobile developer",
+      "Java programmer",
+      "Quality engineer",
+      "Release engineer"
+    ],
+    "select": false
+  },
+  {
+    "name": "Firstname Lastname",
+    "img": "i/user-9.jpg",
+    "interviews": [
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "complete"
+      },
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      }
+    ],
+    "progress": 30,
+    "location": "Somers",
+    "region": "Newyork",
+    "competency": [
+      "Mobile developer",
+      "Java programmer",
+      "Quality engineer",
+      "Release engineer",
+      "Release engineer"
+    ],
+    "select": false
+  },
+  {
+    "name": "Firstname Lastname",
+    "img": "i/user-9.jpg",
+    "interviews": [
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "accept"
+      },
+      {
+        "name":"Interview 1",
+        "status": "complete"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      }
+    ],
+    "progress": 20,
+    "location": "Somers",
+    "region": "Newyork",
+    "competency": [
+      "Mobile developer",
+      "Java programmer",
+      "Quality engineer",
+      "Release engineer"
+    ],
+    "select": false
+  },
+  {
+    "name": "Firstname Lastname",
+    "img": "i/user-unknown.jpg",
+    "interviews": [
+      {
+        "name":"Interview 1",
+        "status": "complete"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      }
+    ],
+    "progress": 50,
+    "location": "Somers",
+    "region": "Newyork",
+    "competency": [
+      "Mobile developer",
+      "Java programmer",
+      "Quality engineer",
+      "Release engineer"
+    ],
+    "select": false
+  },
+  {
+    "name": "Firstname Lastname",
+    "img": "i/user-9.jpg",
+    "interviews": [
+      {
+        "name":"Interview 1",
+        "status": "complete"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      },
+      {
+        "name":"Interview 1",
+        "status": "schedule"
+      }
+    ],
+    "progress": 90,
+    "location": "Somers",
+    "region": "Newyork",
+    "competency": [
+      "Mobile developer",
+      "Java programmer",
+      "Quality engineer",
+      "Release engineer",
+      "Release engineer"
+    ],
+    "select": false
+  }
+]

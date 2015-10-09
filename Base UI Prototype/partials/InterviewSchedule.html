@@ -1,0 +1,73 @@
+<header class="header">
+    <div class="container-fluid">
+        <h1 data-ng-if="!search">{{pageTitle}}</h1>
+        <!--End .title-->
+        <a data-ng-if="!search" href="javascript:" class="user" data-ng-click="$parent.showUsers()">
+            <img src="i/user-1.jpg" alt="user-thumb" data-ng-src="{{$parent.selectedUser.img}}">
+            {{$parent.selectedUser.name}}
+        </a>
+        <!--End .user details-->
+        <a data-ng-if="!search" href="javascript:" class="icon filter"></a>
+        <!--End .filter icon-->
+        
+    </div>
+</header>
+<!--End .header-->
+
+<div class="page-content">
+    <div class="schedule-group" data-ng-repeat="notification in notifications">
+        <div class="heading-group clearfix">
+            <div class="pull-right total">{{notification.interviews.length}} Interviews</div>
+            <span>{{notification.group}}</span>
+        </div>
+        <div class="notification-holder interviewer-notification-holder">
+            <div class="col-md-4 col-sm-6"
+             data-ng-repeat="candidate in notification.interviews">
+                <div class="inner" data-ng-class="{'no-buttons': notification.value !== 'now'}">
+                    <div class="media" data-same-height>
+                        <div class="media-left">
+                            <div class="radial-progress">
+                                <div class="circle">
+                                    <div class="mask full" data-ng-style="getTransform(candidate.progress,1.8)">
+                                        <div class="fill" data-ng-style="getTransform(candidate.progress,1.8)"></div>
+                                    </div>
+                                    <div class="mask half">
+                                        <div class="fill" data-ng-style="getTransform(candidate.progress,1.8)"></div>
+                                        <div class="fill fix" data-ng-style="getTransform(candidate.progress,3.6)"></div>
+                                    </div>
+                                </div>
+                                <div class="inset">
+                                    <img src="i/user-unknown.jpg" data-ng-src="{{candidate.img}}" alt="thumb">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <dl>
+                                <dt>Candidate</dt>
+                                <dd>{{candidate.name}}</dd>
+                                <dt>Interview Date</dt>
+                                <dd>{{candidate.date | shortdate}}</dd>
+                                <dt>Location</dt>
+                                <dd>{{candidate.location}}</dd>
+                                <dt>Competency</dt>
+                                <dd class="last">{{candidate.competency}}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!--End user-->
+                    <div class="buttons-group clearfix" data-ng-if="notification.value === 'now'">
+                        <div class="pull-left col-12">
+                            <a href="#/interviewConduct" class="btn blue btn-start">Start</a>
+                        </div>
+                    </div>
+                </div>
+                <!--End inner-->
+            </div>
+        </div>
+				<!--End interviewer-holder-->
+    </div>
+    <!--End .group -->
+</div>
+<!--End .page-content-->
+
+<footer class="footer"  data-ng-include="'templates/InterviewerFooter.html'"></footer>

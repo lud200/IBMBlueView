@@ -1,0 +1,25 @@
+<div class="reason-popup score-popup" data-ng-click="$event.stopPropagation()">
+    <div class="status">
+
+        <div class="score">
+        	<h3>Total Score</h3>
+            <div class="inset">
+                <img src="i/user-unknown.jpg" data-ng-src="{{selectedConduct.img}}" alt="thumb">
+            </div>
+            <p>{{selectedConduct.score}}</p>
+        </div>
+        <!--End user-->
+    </div>
+    <!--End status-->
+    <div class="desc">
+    	<textarea placeholder="Enter additional comment (optional)"></textarea>
+    </div>
+    <!--End .desc-->
+    
+    <div class="buttons-group">
+    	<a href="javascript:;" class="btn white btn-edit" data-ng-click="hidePopup()">Edit Interview</a>
+		<a href="#/interviewSchedule" class="btn blue btn-submit">Submit Results</a>
+    </div>
+    <!--End .buttons-group -->
+
+</div>

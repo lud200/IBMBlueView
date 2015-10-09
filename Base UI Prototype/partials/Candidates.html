@@ -1,0 +1,87 @@
+<header class="header">
+    <div class="container-fluid">
+        <h1 data-ng-if="!search">{{pageTitle}}</h1>
+        <!--End .title-->
+        <a data-ng-if="!search" href="javascript:" class="user" data-ng-click="$parent.showUsers()">
+            <img src="i/user-1.jpg" alt="user-thumb" data-ng-src="{{$parent.selectedUser.img}}">
+            {{$parent.selectedUser.name}}
+        </a>
+        <!--End .user details-->
+        <a data-ng-if="!search" href="javascript:" class="icon search right-margin" data-ng-click="showSearch()"></a>
+        <!--End .search icon-->
+        <a data-ng-if="!search" href="javascript:" data-ng-click="showFilterSidebar()" class="icon filter"></a>
+        <!--End .filter icon-->
+        <a data-ng-if="!search" href="javascript:" data-ng-click="showSortSidebar()" class="icon sort"></a>
+        <!--End .sort icon-->
+        <a data-ng-if="!search" href="javascript:" class="icon add"></a>
+        <!--End .add icon-->
+
+        <a data-ng-if="search" href="javascript:" data-ng-click="cancelSearch()" class="link left-align">Cancel</a>
+        <!--End cancel-->
+        <div data-ng-if="search" class="search-input">
+            <input data-ng-model="searchText.text" data-ng-change="doSearch(searchText.text)" type="text" data-auto-focus/>
+            <a href="javascript:" data-ng-if="searchText.text.length>0" data-ng-click="clearSearchText()" class="clear"></a>
+        </div>
+        <!--End .search-input-->
+    </div>
+</header>
+<!--End .header-->
+
+
+<div class="page-content">
+    <div class="interviewers-holder">
+        <div data-ng-init="candidate.actions = false;" class="col-md-4 col-sm-6 {{candidate.status}}  {{candidate.actions?'show-action':''}}"
+             data-ng-repeat="candidate in candidates | orderBy : $parent.sortByOpt : $parent.sortOption" data-same-height>
+            <div class="inner">
+                <a href="javascript:" data-ng-click="toggleAction(candidate)" class="action-btn"></a>
+
+                <div class="user">
+                    <div class="radial-progress">
+                        <div class="circle">
+                            <div class="mask full" data-ng-style="getTransform(candidate.interviews,1.8)">
+                                <div class="fill" data-ng-style="getTransform(candidate.interviews,1.8)"></div>
+                            </div>
+                            <div class="mask half">
+                                <div class="fill" data-ng-style="getTransform(candidate.interviews,1.8)"></div>
+                                <div class="fill fix" data-ng-style="getTransform(candidate.interviews,3.6)"></div>
+                            </div>
+                        </div>
+                        <div class="inset">
+                            <img src="i/user-unknown.jpg" data-ng-src="{{candidate.img}}" alt="thumb">
+                        </div>
+                    </div>
+                    <!--end image-->
+                    <div class="interview-status">
+                        <span data-ng-repeat="interview in candidate.interviews" class="{{interview.status}}"></span>
+                    </div>
+                    <!--end status-->
+                    <span class="name">{{candidate.name}}</span>
+                    <span class="interviews">{{getCompletedInterviews(candidate.interviews)}} Interviews Completed</span>
+                    <span class="location">{{candidate.location}}{{candidate.region}}</span>
+                    <span class="qualification">
+                        <span data-ng-repeat="qualification in candidate.competency | limitTo : 4 track by $index">
+                            {{($index===3 && candidate.competency.length>4)? candidate.competency.length-3+' more...':qualification}}
+                        </span>
+                    </span>
+                </div>
+                <!--End user-->
+            </div>
+            <!--End inner-->
+            <div class="actions show-all">
+                <a href="#/candidateInfo" class="details"><i></i>Details</a>
+                <a href="javascript:" class="edit"><i></i>Edit</a>
+                <a href="javascript:" data-ng-click="deleteCandidate(candidate)" class="delete"><i></i>Delete</a>
+            </div>
+            <!--End actions-->
+        </div>
+    </div>
+    <!--End interviewer-holder-->
+
+</div>
+<!--End .page-content-->
+
+<footer class="footer"  data-ng-include="'templates/Footer.html'"></footer>
+<!--End footer-->
+
+<div class="popup search-popup" data-ng-click="hideInnerPopup()" data-ng-if="innerPopup!==''" data-ng-include="'templates/popups/'+innerPopup+'Popup.html'"></div>
+<!--End .popup-->

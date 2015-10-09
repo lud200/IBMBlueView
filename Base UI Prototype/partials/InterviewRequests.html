@@ -1,0 +1,75 @@
+<header class="header">
+    <div class="container-fluid">
+        <h1 data-ng-if="!search">{{pageTitle}}</h1>
+        <!--End .title-->
+        <a data-ng-if="!search" href="javascript:" class="user" data-ng-click="$parent.showUsers()">
+            <img src="i/user-1.jpg" alt="user-thumb" data-ng-src="{{$parent.selectedUser.img}}">
+            {{$parent.selectedUser.name}}
+        </a>
+        <!--End .user details-->
+        <a data-ng-if="!search" href="javascript:" data-ng-click="showFilterSidebar()" class="icon filter"></a>
+        <!--End .filter icon-->
+        <a data-ng-if="!search" href="javascript:" data-ng-click="showSortSidebar()" class="icon sort"></a>
+        <!--End .sort icon-->
+        
+    </div>
+</header>
+<!--End .header-->
+
+
+<div class="page-content">
+    <div class="notification-holder interviewer-notification-holder">
+        <div class="col-md-4 col-sm-6"
+             data-ng-repeat="notification in notifications | orderBy : $parent.sortByOpt : $parent.sortOption">
+            <div class="inner">
+                <div class="media" data-same-height>
+                	<div class="media-left">
+                        <div class="radial-progress">
+                            <div class="circle">
+                                <div class="mask full" data-ng-style="getTransform(notification.candidate.progress,1.8)">
+                                    <div class="fill" data-ng-style="getTransform(notification.candidate.progress,1.8)"></div>
+                                </div>
+                                <div class="mask half">
+                                    <div class="fill" data-ng-style="getTransform(notification.candidate.progress,1.8)"></div>
+                                    <div class="fill fix" data-ng-style="getTransform(notification.candidate.progress,3.6)"></div>
+                                </div>
+                            </div>
+                            <div class="inset">
+                                <img src="i/user-unknown.jpg" data-ng-src="{{notification.candidate.img}}" alt="thumb">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                    	<dl>
+                        	<dt>Candidate</dt>
+                            <dd>{{notification.candidate.name}}</dd>
+                            <dt>Interview Date</dt>
+                            <dd>{{notification.candidate.date | shortdate}}</dd>
+                            <dt>Location</dt>
+                            <dd>{{notification.candidate.location}}</dd>
+                            <dt>Competency</dt>
+                            <dd>{{notification.candidate.competency}}</dd>
+                            <dt>Assigned by</dt>
+                            <dd class="last">{{notification.candidate.assigned}}</dd>
+                        </dl>
+                    </div>
+                </div>
+                <!--End user-->
+                <div class="buttons-group">
+                    <div class="pull-left col-5">
+                    	<a href="javascript:;" class="btn white btn-decline" data-ng-click="decline(notification)">Decline</a>
+                    </div>
+                    <div class="pull-left col-7">
+                    	<a href="javascript:;" class="btn blue btn-accept" data-ng-click="accept(notification)">Accept</a>
+                    </div>
+                </div>
+            </div>
+            <!--End inner-->
+        </div>
+    </div>
+    <!--End interviewer-holder-->
+
+</div>
+<!--End .page-content-->
+
+<footer class="footer"  data-ng-include="'templates/InterviewerFooter.html'"></footer>

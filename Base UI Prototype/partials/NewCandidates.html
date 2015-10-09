@@ -1,0 +1,113 @@
+<header class="header">
+    <div class="container-fluid">
+        <h1 data-ng-if="!search">{{pageTitle}}</h1>
+        <!--End .title-->
+        <a data-ng-if="!search" href="javascript:" class="user" data-ng-click="$parent.showUsers()">
+            <img src="i/user-1.jpg" alt="user-thumb" data-ng-src="{{$parent.selectedUser.img}}">
+            {{$parent.selectedUser.name}}
+        </a>
+        <!--End .user details-->
+
+        <a href="javascript:" class="link right-align save icon {{selectedInterviewers.length>0?'':'disabled'}}">Save</a>
+        <!--End save-->
+    </div>
+</header>
+<!--End .header-->
+
+<div class="page-content {{popup !==''?'show-popup':''}}">
+    <div class="candidate-holder clearfix">
+        <div class="col-sm-6">
+            <div class="col-header profile">Profile</div>
+            <!--end .col-header-->
+            <div class="col-content">
+                <div class="add-photo">
+                    <img data-ng-if="candidate.image" src="i/photo.png" data-ng-src="{{candidate.image}}" alt="photo">
+                    <span>{{candidate.image==='i/photo.png'?'Add Photo':'Change Photo'}}</span>
+                    <form>
+                        <input data-upload-image type="file" name="upload">
+                    </form>
+                </div>
+                <!--End add-photo-->
+                <div class="inputs">
+                    <div class="input-row">
+                        <input data-ng-model="candidate.name" type="text" placeholder="Name">
+                        <a data-ng-if="candidate.name!==''" data-ng-click="candidate.name=''" href="javascript:" class="clear"></a>
+                    </div>
+                    <div class="input-row">
+                        <label class="label clearfix">
+                            <span>Region</span>
+                            <a href="javascript:" data-ng-click="showPopup($event,'regions')" class="select">{{candidate.region!==''?candidate.region:'Select'}}</a>
+                        </label>
+                    </div>
+                    <div class="input-row">
+                        <label class="label clearfix">
+                            <span>Location</span>
+                            <a href="javascript:" data-ng-click="showPopup($event,'locations')" class="select {{candidate.region===''?'disable':''}}">{{candidate.location!==''?candidate.location:'Select'}}</a>
+                        </label>
+                    </div>
+                    <div class="input-row">
+                        <label class="label clearfix">
+                            <span>Competency</span>
+                            <a href="javascript:" id="competenceAdd" data-ng-click="addCompetency()" class="add"></a>
+                        </label>
+                        <div class="competence" data-ng-repeat="competence in candidate.competency track by $index">
+                            {{competence}}
+                            <a href="javascript:" data-ng-click="removeCompetency(competence)"></a>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <label class="label clearfix">
+                            <span>Resume</span>
+                            <a href="javascript:" class="add"></a>
+                            <input type="file" data-file-model="candidate.resume">
+                        </label>
+                        <div class="competence" data-ng-if="candidate.resume.name">
+                            {{candidate.resume.name}}
+                            <a href="javascript:" data-ng-click="removeResume()"></a>
+                        </div>
+                    </div>
+                </div>
+                <!--End inputs-->
+            </div>
+            <!--end .col-content-->
+        </div>
+        <div class="col-sm-6">
+            <div class="col-header schedule">Interview Schedule</div>
+            <!--end .col-header-->
+            <div class="col-content">
+                <div class="no-interview" data-ng-if="selectedInterviewers.length===0">
+                    <span>No interview has been scheduled.</span>
+                </div>
+                <!--End .no-interview-->
+
+                <div class="selected-interviewers">
+                    <div class="interviewer clearfix" data-ng-repeat="interviewer in selectedInterviewers">
+                        <a href="javascript:" data-ng-click="deleteInterviewer(interviewer)" class="delete"></a>
+                        <img src="i/user-unknown.jpg" data-ng-src="{{interviewer.img}}" alt="thumb">
+                        <div class="desc">
+                            <span class="name">{{interviewer.name}}</span>
+                            <span class="time">{{dt | date:'MMM dd, yyyy'}} {{interviewer.scheduledTime}}</span>
+                        </div>
+                    </div>
+                </div>
+                <!--End .selected-interviewer-->
+                <a href="javascript:" data-ng-click="addInterviewers()" class="btn">Add Interview</a>
+            </div>
+            <!--end .col-content-->
+        </div>
+
+    </div>
+    <!--End candidate-holder-->
+</div>
+<!--End .page-content-->
+
+
+<footer class="footer"  data-ng-include="'templates/Footer.html'"></footer>
+<!--End footer-->
+
+
+<div class="popup" data-ng-click="hideInnerPopup()" data-ng-if="innerPopup!==''" data-ng-include="'templates/popups/'+innerPopup+'Popup.html'"></div>
+<!--End .popup-->
+
+<div class="add-interviewers" data-ng-if="showAddInterviewers"  data-ng-include="pageUrl"></div>
+<!--End add-interviewers-->

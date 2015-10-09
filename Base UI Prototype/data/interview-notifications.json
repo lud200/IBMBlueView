@@ -1,0 +1,92 @@
+[
+  {
+    "status":"schedule",
+    "statusLabel": "You have an interview in an hour",
+    "pastTime": "5 mins ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "date": "2015-09-07T02:00:00.782Z",
+      "location": "Acme Location",
+      "competency": "Mobile Developer",
+      "img":"i/user-7.jpg",
+      "progress": 50
+    },
+    "declineReason":"",
+    "acceptReason":""
+  },
+  {
+    "status":"request",
+    "statusLabel": "New Interview Request",
+    "pastTime": "10 mins ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "date": "2015-09-07T02:00:00.782Z",
+      "location": "Acme Location",
+      "competency": "Mobile Developer",
+      "img":"i/user-9.jpg",
+      "progress": 25
+    },
+    "declineReason":"",
+    "acceptReason":""
+  },
+  {
+    "status":"request",
+    "statusLabel": "New Interview Request",
+    "pastTime": "10 mins ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "date": "2015-09-07T02:00:00.782Z",
+      "location": "Acme Location",
+      "competency": "Mobile Developer",
+      "img":"i/user-9.jpg",
+      "progress": 25
+    },
+    "declineReason":"",
+    "acceptReason":""
+  },
+  {
+    "status":"request",
+    "statusLabel": "New Interview Request",
+    "pastTime": "10 mins ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "date": "2015-09-07T02:00:00.782Z",
+      "location": "Acme Location",
+      "competency": "Mobile Developer",
+      "img":"i/user-9.jpg",
+      "progress": 25
+    },
+    "declineReason":"",
+    "acceptReason":""
+  },
+  {
+    "status":"request",
+    "statusLabel": "New Interview Request",
+    "pastTime": "10 mins ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "date": "2015-09-07T02:00:00.782Z",
+      "location": "Acme Location",
+      "competency": "Mobile Developer",
+      "img":"i/user-9.jpg",
+      "progress": 25
+    },
+    "declineReason":"",
+    "acceptReason":""
+  },
+  {
+    "status":"request",
+    "statusLabel": "New Interview Request",
+    "pastTime": "10 mins ago",
+    "candidate":{
+      "name":"Firstname Lastname",
+      "date": "2015-09-07T02:00:00.782Z",
+      "location": "Acme Location",
+      "competency": "Mobile Developer",
+      "img":"i/user-9.jpg",
+      "progress": 25
+    },
+    "declineReason":"",
+    "acceptReason":""
+  }
+]

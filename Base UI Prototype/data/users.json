@@ -1,0 +1,32 @@
+[
+  {
+    "img":"i/user-1.jpg",
+    "name":"John Smith",
+    "loggedIn":true
+  },
+  {
+    "img":"i/user-2.jpg",
+    "name":"Jane Doe",
+    "loggedIn":false
+  },
+  {
+    "img":"i/user-3.jpg",
+    "name":"Jackblack Longnamous",
+    "loggedIn":false
+  },
+  {
+    "img":"i/user-4.jpg",
+    "name":"Firstname Lastname",
+    "loggedIn":false
+  },
+  {
+    "img":"i/user-5.jpg",
+    "name":"Firstname Lastname",
+    "loggedIn":false
+  },
+  {
+    "img":"i/user-6.jpg",
+    "name":"Firstname Lastname",
+    "loggedIn":false
+  }
+]

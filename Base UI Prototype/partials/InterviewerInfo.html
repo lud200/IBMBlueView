@@ -1,0 +1,83 @@
+<header class="header">
+    <div class="container-fluid">
+        <h1>{{pageTitle}}</h1>
+        <!--End .title-->
+
+        <a href="javascript:" class="icon search"></a>
+        <!--End .search icon-->
+        <a href="javascript:" class="icon delete"></a>
+        <!--End .search icon-->
+        <a href="javascript:" class="icon edit"></a>
+        <!--End .search icon-->
+        <a href="#/interviewers" class="icon back"></a>
+        <!--End .search icon-->
+
+    </div>
+</header>
+<!--End .header-->
+
+
+<div class="page-content interviewer-info">
+
+    <div class="left-side">
+        <div class="interviewer">
+            <img src="i/user-unknown.jpg" data-ng-src="{{interviewer.img}}" alt="thumb">
+            <span class="name">Firstname Lastname</span>
+            <span class="schedule-interviewers">{{interviewer.interviews.length}} Interviews Scheduled</span>
+        </div>
+        <div class="interviewer-info">
+            <span class="location">{{interviewer.location}}{{interviewer.region}}</span>
+			<span class="qualification">
+				<span data-ng-repeat="qualification in interviewer.competency | limitTo : 4 track by $index">
+					{{($index===3 && interviewer.competency.length>4)? interviewer.competency.length-3+' more...':qualification}}
+				</span>
+			</span>
+        </div>
+    </div>
+    <!--End left-side-->
+
+    <div class="interviews">
+        <h1 class="title">Scheduled Interviews</h1>
+        <div class="interview" data-ng-repeat="candidate in interviewer.interviews">
+            <div class="radial-progress">
+                <div class="circle">
+                    <div class="mask full" data-ng-style="getTransform(candidate.progress,1.8)">
+                        <div class="fill" data-ng-style="getTransform(candidate.progress,1.8)"></div>
+                    </div>
+                    <div class="mask half">
+                        <div class="fill" data-ng-style="getTransform(candidate.progress,1.8)"></div>
+                        <div class="fill fix" data-ng-style="getTransform(candidate.progress,3.6)"></div>
+                    </div>
+                </div>
+                <div class="inset">
+                    <img src="i/user-unknown.jpg" data-ng-src="{{candidate.img}}" alt="thumb">
+                </div>
+            </div>
+            <!--End .progress-->
+
+            <div class="info">
+                <div class="values">
+                    <div class="label">Candidate</div>
+                    <div class="val">{{candidate.name}}</div>
+                </div>
+                <div class="values">
+                    <div class="label">Interview Date</div>
+                    <div class="val">{{candidate.date}}</div>
+                </div>
+                <div class="values">
+                    <div class="label">Location</div>
+                    <div class="val">{{candidate.location}}</div>
+                </div>
+            </div>
+            <!--End .info-->
+        </div>
+    </div>
+    <!--End left-side-->
+
+
+</div>
+<!--End .page-content-->
+
+
+<footer class="footer"  data-ng-include="'templates/Footer.html'"></footer>
+<!--End footer-->

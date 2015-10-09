@@ -1,0 +1,66 @@
+<header class="header">
+    <div class="container-fluid">
+        <h1 data-ng-if="!search">Edit interview for {{selectedInterviewers[0].name}}</h1>
+        <!--End .title-->
+
+        <a href="javascript:" data-ng-click="addInterviewers()" class="icon back"></a>
+        <!--End save-->
+
+        <a href="javascript:" data-ng-click="submitInterviewers()" class="link right-align {{schduleTime!==''?'':'disabled'}}">Submit</a>
+        <!--End save-->
+    </div>
+</header>
+<!--End .header-->
+
+
+<div class="page-content time-select">
+    <aside class="left-side">
+        <div class="interviewer">
+            <img src="i/user-2.jpg" data-ng-src="{{selectedInterviewers[0].img}}" alt="thumb">
+            <span class="name">{{selectedInterviewers[0].name}}</span>
+            <span class="schedule-interviewers">{{selectedInterviewers[0].interviews}} Interviews Scheduled</span>
+        </div>
+        <!--End interviewer-->
+
+        <div class="calendar">
+            <div data-datepicker data-ng-model="dt" data-format-day="d" data-show-weeks="false"></div>
+        </div>
+        <!--End calendar-->
+    </aside>
+    <!--End left side-->
+    <div class="time-schedule-holder">
+        <div class="notification-bar">
+            <span>Select Date/ Time</span>
+        </div>
+
+        <div class="time-holder">
+            <div class="time-row clearfix" data-ng-repeat="time in timeSchedule">
+                <div class="time">
+                    <span>{{time.time}}</span>
+                </div>
+                <div data-ng-if="timeSchedule.length-1 > $index" class="event {{time.available?'':'not-available'}}">
+                    <img src="i/user-unknown.jpg" alt="thumb" data-ng-if="time.img" data-ng-src="{{time.img}}">
+                    <div class="desc" data-ng-if="!time.available">
+                        <span class="msg">{{time.msg}}</span>
+                        <span class="name">{{time.name}}<span data-ng-if="time.candidate"> ({{time.candidate}})</span></span>
+                    </div>
+
+                    <div class="schedule {{schduleTime===time.time?'time-scheduled':''}}" data-ng-if="time.available">
+                        <a href="javascript:" data-ng-click="addTime(time.time)" class="add-time">Schedule</a>
+                        <a href="javascript:" data-ng-click="removeTime()" class="clear-scheduled-time"></a>
+                        <span class="time-scheduled">Scheduled</span>
+                    </div>
+                </div>
+                <div data-ng-if="timeSchedule.length-1 === $index" class="event no-event">
+
+                    <div class="schedule {{schduleTime===time.time?'time-scheduled':''}}" data-ng-if="time.available">
+                        <a href="javascript:" data-ng-click="addTime(time.time)" class="add-time">Schedule</a>
+                        <a href="javascript:" data-ng-click="removeTime()" class="clear-scheduled-time"></a>
+                        <span class="time-scheduled">Scheduled</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

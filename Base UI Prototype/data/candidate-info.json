@@ -1,0 +1,62 @@
+ {
+  "name": "Firstname Lastname",
+  "img": "i/user-2.jpg",
+  "interviews": [
+    {
+      "name":"Firstname Lastname",
+      "status": "complete",
+      "img":"i/user-2.jpg",
+      "date":"Aug 31, 2015   10:00 AM"
+    },
+    {
+      "name":"Firstname Lastname",
+      "status": "complete",
+      "img":"i/user-2.jpg",
+      "date":"Aug 31, 2015   10:00 AM"
+    },
+    {
+      "name":"Firstname Lastname",
+      "status": "accept",
+      "img":"i/user-2.jpg",
+      "date":"Sep 3, 2015   10:00 AM"
+    },
+    {
+      "name":"Firstname Lastname",
+      "status": "pending",
+      "img":"i/user-2.jpg",
+      "date":"Sep 3, 2015   10:00 AM"
+    }
+  ],
+  "progress": 50,
+  "location": "Somers",
+  "region": "Newyork",
+  "competency": [
+    "Mobile developer",
+    "Java programmer",
+    "Quality engineer",
+    "Release engineer"
+  ],
+  "experiences":[
+    {
+      "time":"January 2010 - Present (5 years)",
+      "position":"User Experience Designer",
+      "company":"Acme Company",
+      "location":"Somers, Newyork",
+      "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo."
+    },
+    {
+      "time":"January 2007 - December 2009 (2 years)",
+      "position":"Information Architect",
+      "company":"Acme Company",
+      "location":"Somers, Newyork",
+      "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo."
+    },
+    {
+      "time":"January 2004 - December 2006 (2 years)",
+      "position":"Front-End Interface Designer",
+      "company":"Acme Company",
+      "location":"Somers, Newyork",
+      "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo."
+    }
+  ]
+}

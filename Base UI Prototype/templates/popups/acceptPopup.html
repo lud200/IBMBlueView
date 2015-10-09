@@ -1,0 +1,46 @@
+<div class="reason-popup accept-popup" data-ng-click="$event.stopPropagation()">
+    <div class="status">
+        <h2>Interview Accepted</h2>
+
+        <div class="user">
+            <div class="radial-progress">
+                <div class="circle">
+                    <div class="mask full" data-ng-style="getTransform(selectedNotification.candidate.progress,1.8)">
+                        <div class="fill" data-ng-style="getTransform(selectedNotification.candidate.progress,1.8)"></div>
+                    </div>
+                    <div class="mask half">
+                        <div class="fill" data-ng-style="getTransform(selectedNotification.candidate.progress,1.8)"></div>
+                        <div class="fill fix" data-ng-style="getTransform(selectedNotification.candidate.progress,3.6)"></div>
+                    </div>
+                </div>
+                <div class="inset">
+                    <img src="i/user-unknown.jpg" data-ng-src="{{selectedNotification.candidate.img}}" alt="thumb">
+                </div>
+            </div>
+            <span class="type">Candidate</span>
+            <span class="name">{{selectedNotification.candidate.name}}</span>
+        </div>
+        <!--End user-->
+    </div>
+    <!--End status-->
+    <div class="desc">
+    	<div class="clearfix">
+            <dl class="pull-left">
+                <dt>Interview Date</dt>
+                <dd>{{selectedNotification.candidate.date | shortdate}}</dd>
+            </dl>
+            <dl class="pull-left">
+                <dt>Location</dt>
+                <dd>{{selectedNotification.candidate.location}}</dd>
+            </dl>
+        </div>
+        <p>Schedule has been added to your calendar.</p>
+    </div>
+    <!--End .desc-->
+    
+    <div class="buttons-group">
+    	<a href="javascript:;" class="btn blue btn-done" data-ng-click="hidePopup()">Done</a>
+    </div>
+    <!--End .buttons-group -->
+
+</div>

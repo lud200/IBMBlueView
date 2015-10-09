@@ -1,0 +1,27 @@
+<div class="sidebar-content sort-sidebar" data-ng-click="$event.stopPropagation()">
+    <h1 class="title">{{filterTitle}}</h1>
+    <!--End title-->
+    <div class="group">
+        <ul class="filter">
+            <li data-ng-repeat="opt in filterOptions">
+                <input type="text" data-ng-keyup="showFilterOptions(opt,$event)" data-ng-model="filter[opt].val" placeholder="{{filter[opt].placeholder}}">
+                <div class="options clearfix" data-ng-if="filter[opt].options.length > 0">
+                    <span class="filter-val" data-ng-repeat="filterOption in filter[opt].options">{{filterOption}}<a href="javascript:" data-ng-click="removeFilterOption(filterOption,opt)"></a> </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="button-holder">
+        <a href="javascript:" class="btn reset {{getStatus()}}" data-ng-click="resetFilter()">Reset</a>
+        <!--End btn-->
+        <a href="javascript:" class="btn apply {{getStatus()}}" data-ng-click="hideSidebar()">Apply</a>
+        <!--End btn-->
+    </div>
+
+    <div class="filter-search-options" data-ng-if="(filterSearchResults | filterSidebarHighlight : filter[opt].val).length > 0">
+        <span class="arrow"></span>
+        <a href="javascript:" data-ng-click="addFilerValue(result.name)" data-ng-repeat="result in filterSearchResults | filterSidebarHighlight : filter[opt].val" data-ng-bind-html="result.tempName"></a>
+    </div>
+
+</div>

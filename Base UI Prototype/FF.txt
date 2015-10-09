@@ -1,0 +1,35 @@
+1. top left corner arrow there is one px margin bottom
+http://grab.by/Kqzq
+
+There is no margin in iPad.
+
+2.Reviewer Response: circle progress
+  circle progress image with green progress bar look and feel is not follow storyboard
+  http://grab.by/KqxO
+
+  It cannot be exactly match with html and CSS.
+
+3.Reviewer Response: 04_1_HR_candidate_info.png.
+  right list one of item clock icon bottom display strange border
+  http://grab.by/Kr1U
+
+  I couldn't see it in iPad
+
+4.#2 all profile image loader person image is bigger than storyboard
+
+  I have use same images for every places. It is okay when use different image.
+
+5.Reviewer Response: 02_7_HR_add_candidate_select_interviewer.png title need use name.
+
+  First need to enter name and it will display on title.
+
+6.Reviewer Response: 02_7_HR_add_candidate_select_interviewer.png
+  Grid list item should be only select one item at the same time, because we need click next
+  button should set schedule for selected person, if in this page we select multiple person,
+  then in next page how could we know schedule for whom
+
+  There is no description about this in wiki and i think not need to do because timeline and price is not enough for do these things. :(
+
+7.Reviewer Response: login focus to the input should hide red error text
+
+  No details about this in wiki.

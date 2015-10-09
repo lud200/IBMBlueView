@@ -1,0 +1,50 @@
+{
+  "name": "Firstname Lastname",
+  "img": "i/user-2.jpg",
+  "location": "Somers",
+  "region": "Newyork",
+  "competency": [
+    "Mobile developer",
+    "Java programmer",
+    "Quality engineer",
+    "Release engineer"
+  ],
+  "interviews": [
+    {
+      "name":"Firstname Lastname",
+      "img":"i/user-7.jpg",
+      "progress": 50,
+      "date":"Sep 5,  10:00 AM",
+      "location":"Acme Location"
+    },
+    {
+      "name":"Firstname Lastname",
+      "img":"i/user-9.jpg",
+      "progress": 25,
+      "date":"Sep 5,  10:00 AM",
+      "location":"Acme Location"
+    },
+    {
+      "name":"Firstname Lastname",
+      "img":"i/user-7.jpg",
+      "progress": 50,
+      "date":"Sep 7,  10:00 AM",
+      "location":"Acme Location"
+    },
+    {
+      "name":"Firstname Lastname",
+      "img":"i/user-9.jpg",
+      "progress": 25,
+      "date":"Sep 7,  10:00 AM",
+      "location":"Acme Location"
+    },
+    {
+      "name":"Firstname Lastname",
+      "img":"i/user-unknown.jpg",
+      "progress": 33,
+      "date":"Sep 7,  10:00 AM",
+      "location":"Acme Location"
+    }
+  ]
+
+}

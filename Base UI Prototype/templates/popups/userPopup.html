@@ -1,0 +1,39 @@
+<div class="user-popup" data-ng-click="$event.stopPropagation()">
+    <span class="arrow"></span>
+    <!--End arrow-->
+    <div data-ng-if="!$parent.tempUser">
+        <h2>Select an Account</h2>
+        <!--title-->
+        <ul>
+            <li data-ng-if="!user.loggedIn" data-ng-repeat="user in $parent.users">
+                <a class="with-arrow" href="javascript:" data-ng-click="selectUser(user)">
+                    <img src="i/user-1.jpg" alt="user-thumb" data-ng-src="{{user.img}}">
+                    <span>{{user.name}}</span>
+                </a>
+            </li>
+        </ul>
+        <!--End list-->
+        <div class="button-holder">
+            <a href="javascript:" data-ng-click="logOut()" class="btn blue signInWithDiffernt">Sign in with different account</a>
+            <a href="javascript:" data-ng-click="logOut()" class="btn logOut">Log out</a>
+        </div>
+        <!--End .button-holder-->
+    </div>
+    <div data-ng-if="$parent.tempUser">
+        <h2><a href="javascript:" class="back" data-ng-click="showUsers()"></a>Enter Password</h2>
+        <!--title-->
+        <div class="user-info">
+            <img src="i/user-1.jpg" alt="thumb" data-ng-src="{{tempUser.img}}">
+            <span class="name">{{tempUser.name}}</span>
+            <input type="password" data-ng-model="$parent.selectedUserPw" placeholder="Password">
+        </div>
+        <!--End list-->
+        <div class="button-holder">
+            <a href="javascript:" data-ng-click="showUsers()" class="btn cancel">Cancel</a>
+            <a href="javascript:" class="btn blue signIn" data-ng-click="signIn(tempUser,$parent.selectedUserPw)">Sign in</a>
+        </div>
+        <!--End .button-holder-->
+    </div>
+
+</div>
+<!--User popup-->

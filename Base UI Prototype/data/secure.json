@@ -1,0 +1,13 @@
+[
+	{
+		"name": "John Smith",
+		"password": "123456",
+		"img": "i/user-1.jpg"
+	},
+	{
+		"name": "Jane Doe",
+		"password": "123456",
+		"img": "i/user-2.jpg",
+		"role": "interviewer"
+	}
+]

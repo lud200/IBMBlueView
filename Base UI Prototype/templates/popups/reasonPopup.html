@@ -1,0 +1,36 @@
+<div class="reason-popup" data-ng-click="$event.stopPropagation()">
+    <div class="status">
+        <h2>Interview Declined</h2>
+
+        <div class="user">
+            <div class="radial-progress">
+                <div class="circle">
+                    <div class="mask full" data-ng-style="getTransform(selectedNotification.candidate.progress,1.8)">
+                        <div class="fill" data-ng-style="getTransform(selectedNotification.candidate.progress,1.8)"></div>
+                    </div>
+                    <div class="mask half">
+                        <div class="fill" data-ng-style="getTransform(selectedNotification.candidate.progress,1.8)"></div>
+                        <div class="fill fix" data-ng-style="getTransform(selectedNotification.candidate.progress,3.6)"></div>
+                    </div>
+                </div>
+                <div class="inset">
+                    <img src="i/user-unknown.jpg" data-ng-src="{{selectedNotification.candidate.img}}" alt="thumb">
+                </div>
+            </div>
+            <span class="type">Candidate</span>
+            <span class="name">{{selectedNotification.candidate.name}}</span>
+        </div>
+        <!--End user-->
+
+        <div class="user">
+            <img src="i/user-unknown.jpg" data-ng-src="{{selectedNotification.interviewer.img}}" alt="thumb">
+            <span class="type">Interviewer</span>
+            <span class="name">{{selectedNotification.interviewer.name}}</span>
+        </div>
+        <!--End user-->
+    </div>
+    <!--End status-->
+    <div class="desc">{{selectedNotification.rejectReason}}</div>
+    <!--End .desc-->
+
+</div>

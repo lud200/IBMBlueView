@@ -1,0 +1,52 @@
+[
+  {
+    "name":"Mobile Developer",
+    "select":false
+  },
+  {
+    "name":"Java Programmer",
+    "select":false,
+    "sub":[
+      {
+        "name":"Java EJB",
+        "select":false
+      },
+      {
+        "name":"Java EJB",
+        "select":false
+      },
+      {
+        "name":"Java Lorem ipsum",
+        "select":false
+      },
+      {
+        "name":"Java Lorem ipsum",
+        "select":false
+      }
+    ]
+  },
+  {
+    "name":"Release Engineer",
+    "select":false
+  },
+  {
+    "name":"Quality Engineer",
+    "select":false
+  },
+  {
+    "name":"Competency Lorem ipsum",
+    "select":false
+  },
+  {
+    "name":"Competency Lorem ipsum1",
+    "select":false
+  },
+  {
+    "name":"Competency Lorem ipsum2",
+    "select":false
+  },
+  {
+    "name":"Competency Lorem ipsum3",
+    "select":false
+  }
+]

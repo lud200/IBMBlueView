@@ -1,0 +1,29 @@
+<div class="sidebar-content sort-sidebar" data-ng-click="$event.stopPropagation()">
+    <h1 class="title">{{sortTitle}}</h1>
+    <!--End title-->
+    <div class="group">
+        <h2>Sort by</h2>
+        <ul>
+            <li data-ng-repeat="sortOpt in sortBy" class="{{$index=== sortBy.length-1?'no-border':''}}">
+                <a class="{{sortOpt.select?'select':''}}" href="javascript:" data-ng-click="setSortBy(sortOpt)">{{sortOpt.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <!--End group-->
+    <div class="group">
+        <h2>Sort Option</h2>
+        <ul>
+            <li>
+                <a class="{{sortOptionTemp?'':'select'}}" href="javascript:" data-ng-click="setSortOption(false)">Ascending</a>
+            </li>
+            <li>
+                <a class="{{sortOptionTemp?'select':''}}" href="javascript:" data-ng-click="setSortOption(true)">Descending</a>
+            </li>
+        </ul>
+    </div>
+    <!--End group-->
+
+    <a href="javascript:" class="btn" data-ng-click="applySortOption()">Apply</a>
+    <!--End btn-->
+
+</div>

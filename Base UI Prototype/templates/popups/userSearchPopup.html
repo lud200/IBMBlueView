@@ -1,0 +1,33 @@
+<div class="user-popup search" data-ng-click="$event.stopPropagation()">
+    <span class="arrow"></span>
+    <!--End arrow-->
+    <div class="inner">
+        <div>
+            <h2>Candidates</h2>
+            <!--title-->
+            <ul>
+                <li data-ng-repeat="user in searchResults.candidates | highlightFilter : searchText.text">
+                    <a href="javascript:" data-ng-click="selectSearch(user)">
+                        <img src="i/user-1.jpg" alt="user-thumb" data-ng-src="{{user.img}}">
+                        <span data-ng-bind-html="user.tempName"></span>
+                    </a>
+                </li>
+            </ul>
+            <!--End list-->
+        </div>
+        <div>
+            <h2>Interviewers</h2>
+            <!--title-->
+            <ul>
+                <li data-ng-repeat="user in searchResults.interviewers | highlightFilter : searchText.text">
+                    <a href="javascript:" data-ng-click="selectSearch(user)">
+                        <img src="i/user-1.jpg" alt="user-thumb" data-ng-src="{{user.img}}">
+                        <span data-ng-bind-html="user.tempName"></span>
+                    </a>
+                </li>
+            </ul>
+            <!--End list-->
+        </div>
+    </div>
+</div>
+<!--User popup-->
