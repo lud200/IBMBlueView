@@ -1704,5 +1704,11 @@ controllers.controller("interviewConductCtrl",
 			$scope.pageUrl = '';
 		};
 
+        /*Add New row*/
+        $scope.add = function (){
+            $scope.candidate.suggest.push({
+                value: ''
+         });
+        };
 	}
 );
