@@ -133,6 +133,18 @@ controllers.controller("mainCtrl",
                 return;
             }
             $scope.selectedUser = user;
+            if($scope.users[1] == $scope.selectedUser){
+                $scope.users[1].loggedIn=true;
+                $cookies.put('role', 'interviewer');
+                $scope.$parent.role = 'interviewer';
+                $location.path('/interviewerDashboard');
+            }
+            else{
+                $scope.users[0].loggedIn=true;
+                $cookies.put('role', 'hr');
+                $scope.$parent.role = 'hr';
+                $location.path('/dashboard');
+            }
             $scope.popup = '';
         };
 
